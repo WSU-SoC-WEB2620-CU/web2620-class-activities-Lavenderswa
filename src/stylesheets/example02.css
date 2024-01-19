@@ -1,1 +1,94 @@
 /* TODO: Example 02 (Activity 3) CSS goes here */
+
+html{
+    box-sizing: border-box;
+    font-family:'Courier New', Courier;
+    font-size: 16px;
+    background-color:white;
+}
+
+*, ::before, :after{
+    box-sizing:inherit;
+}
+
+nav{
+border-bottom: 1px solid #9c6e79;
+padding:.5rem; 
+}
+
+nav > ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+nav > ul > li{
+    margin:0;
+    display:inline-block;
+    margin:.5rem;
+}
+
+.pull-left{
+    float:left;
+}
+
+.pull-right{
+    float:right;
+}
+
+.clearfix::after{
+    content:"";
+    clear:both;
+    display:table;
+}
+
+/* Link styling */
+
+nav a:link, nav a:visited, nav a:active{
+    text-decoration:none;
+    color:green;
+}
+
+nav a:hover{
+    text-decoration:none;
+    color:purple;
+}
+
+footer{
+    margin: 2em .5rem;
+    padding: .5rem;
+    border-top:1px solid #9c6e79;
+
+}
+
+
+/* Image Styling */
+
+img{
+    max-width:300px;
+    width:50%;
+    border:1px solid #7597a8;
+    border-radius:10px;
+    margin:.75rem;
+}
+
+.container{
+    margin:0 auto;
+    width:80%;
+    counter-reset:article; /*set a counter named "article" and its initial value to zero.*/
+}
+
+/* Styling Articles */
+
+article > h1::before{
+    counter-increment: article; /*increase value of article by 1*/
+    content:"Article " counter(article) ":"; /*displays the word "Article" and the value of the article, then a colon after the number before the content of each one.*/
+    color:#6f2a45;
+}
+
+
+
+
+
+
+
