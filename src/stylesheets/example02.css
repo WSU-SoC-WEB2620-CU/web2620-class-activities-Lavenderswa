@@ -2,7 +2,7 @@
 
 html{
     box-sizing: border-box;
-    font-family:'Courier New', Courier;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
     background-color:white;
 }
@@ -12,7 +12,7 @@ html{
 }
 
 nav{
-border-bottom: 1px solid #9c6e79;
+border-bottom: 1px solid blue;
 padding:.5rem; 
 }
 
@@ -79,16 +79,69 @@ img{
 }
 
 /* Styling Articles */
+/* Henry Nelson */
 
 article > h1::before{
     counter-increment: article; /*increase value of article by 1*/
     content:"Article " counter(article) ":"; /*displays the word "Article" and the value of the article, then a colon after the number before the content of each one.*/
-    color:#6f2a45;
+    color:darkgreen;
 }
 
+/* 52:37 in the video, "styling circles" */
 
+.circle{
+    float:left;
+    width:200px;
+    height:200px;
+    border-radius:100px;
+    margin:.5rem;
+    background-color:lightpink;
+    color:black;
+    font:2rem;
+    text-align:center;
+    vertical-align:middle;
+}
 
+.vcenter{
+    line-height:200px;
+}
+.vcenter2{
+    line-height:200px;
+    margin: 0 calc((100%-800px)/8);
+}
+/* column */ 
 
+column{
+    float:left;
+    padding:10px;
+    color:black;
+}
+.left-col{
+    background-color:lightblue;
+    width:25%;
+    padding:10px;
+}
+.middle-col{
+    background-color:lightgreen;
+    width:50%;
+    padding:10px;
+}
+.right-col{
+    background-color:lightblue;
+    width:25%;
+    padding:10px;
+}
 
+.equal-height{
+    display:table;
+}
 
+.equal-height .column{
+    float:none;
+    display:table-cell;
+}
 
+.multi-col{
+    columns:3;
+    column-gap:2rem;
+}
