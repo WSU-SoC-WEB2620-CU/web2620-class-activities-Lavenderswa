@@ -1,1 +1,128 @@
-/* TODO: Example 05 (Activity 6) CSS goes here */
+/* Henry Nelson */
+html {
+    box-sizing:border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:16px;
+    background-color:#F5F7FF;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+nav > ul > li > a {
+    text-decoration:none;
+    color:black;
+}
+
+nav > ul > li {
+    background:#CBD5CB;
+    margin-left:1rem;
+    list-style-type:none;
+}
+
+h1 {
+    font-size:3rem;
+}
+
+.featured, .aside, .card {
+    background:#97C9ED;
+    padding:1rem;
+    border-radius:1rem;
+}
+
+#login > input {
+    padding:.4rem;
+}
+
+#pricing > span:nth-child(2) 
+{
+    font-size: 4rem;
+}
+
+button{
+    background:#2797D8;
+    padding:.75rem;
+    border:none;
+    border-radius:.5rem;
+    font-size:1.2rem;
+}
+
+/* Grid Styling */ 
+
+body{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:1rem;
+    background:#E2F0FE;
+}
+
+header {
+    grid-column:1 / span 1; /* starts from 1 goes to 2 */
+    font-size:2rem;
+    background:none;
+    align-self:center;
+}
+
+nav { /* start at 2 end at 3*/ 
+    grid-column:2 / span 2; 
+    /* grid-row can also be used */ 
+    background:none;
+}
+
+.featured {
+    grid-area: 2 / 1 / span 2 / span 2;
+}
+
+nav > ul {
+    display:flex;
+}
+
+nav > ul > li:nth-child(1) {
+    margin-left:auto;
+}
+
+/* could continue to assign everything else below to the grid, but not needed for this*/ 
+
+#login { /* row / col / take 1 space / take 1 space */ 
+    grid-area:3 / 3 / span 1 / span 1;
+}
+
+#login { /* row / col / take 1 space / take 1 space */ 
+    grid-area:2 / 3 / span 1 / span 1;
+}
+
+#card1 {
+    grid-area:4 / 1 / span 1 / span 1;
+}
+
+#card2 {
+    grid-area:4 / 2 / span 1 / span 1;
+}
+
+#card3 {
+    grid-area:4 / 3 / span 1 / span 1;
+}
+
+footer {
+    grid-area:5 / 1 / span 1 / span 3;
+    justify-self:center; 
+}
+
+#login{
+    display:flex;
+    flex-flow:column nowrap;
+}
+
+#pricing{
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+}
+
+#pricing > button {
+    align-self: stretch;
+}
+
+
+
