@@ -1,0 +1,121 @@
+// Henry Nelson
+
+html {
+    background-color:lightsteelblue;
+}
+.container {
+    background:lemonchiffon;
+    padding:20px;
+    margin:1rem;
+    width:50vw;
+    height:200px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.container > .item {
+    background:lightgrey;
+    font-size:2rem;
+    border:2px solid purple;
+    border-radius:.5rem;
+    padding:10px 5px;
+    flex-basis:35px;
+}
+
+/* Animations */ 
+
+.container > .item:nth-child(1){
+    transform:skewX(5deg) rotate(10deg) translateY(50px) scale(.75);
+}
+
+.container > .item:nth-child(3){
+    transform:rotate(90deg);
+    transition: transform 3s ease-out, background-color 4s ease-out, color 2s ease-in;
+
+
+}
+
+.container > .item:nth-child(3) :hover{
+    transform:rotate(0deg);
+    transition: transform 3s ease;
+    background-color:orange;
+    color:white;
+}
+
+.container > .item:nth-child(2) {
+
+    animation: 3s linear 2s 4 height-change;
+
+    @keyframes height-change{
+        from{
+            height:0px;
+        }
+
+        to{
+            height:300px;
+        }
+    }
+}
+
+.container > .item:nth-child(4){
+
+    animation:2s ease 4 box4animate;
+
+    @keyframes box4animate{
+
+            0%{
+                height:0px;
+                width:10px;
+                background-color:darkblue;
+            }
+
+            25%{
+                background-color:#fff8b2;
+            }
+
+            50%{
+                background-color:#00068b;
+            }
+
+            100%{
+                height:600px;
+                width:120px;
+                background-color:#f2668b;
+            }
+    }
+}
+
+.container > .item:nth-child(5){
+    animation:5s ease-in-out 4 fifthanimate;
+
+    @keyframes fifthanimate{
+            0%{
+                height:180px;
+                width:10px;
+            }
+            
+            25%{
+                height:30px;
+                width:10px;
+                transform:rotate(180deg);
+            }
+
+            50%{
+                height:180px;
+                transform:rotate(180deg);
+            }
+
+            75%{
+                height:30px;
+                transform:rotate(360deg);
+            }
+
+            100%{
+                height:180px;
+                width:10px;
+            }
+    }
+
+}
+
+
